@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог товаров</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo header__logo" href="index.html">
+        <img class="logo__image" src="#" alt="Mishka logo">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <button class="nav__button" type="button">
+          <span class="visually-hidden">Меню сайте</span>
+        </button>
+      </nav>
+      <form class="form-search header__form" method="post" action="https://echo.htmlacademy.ru">
+        <label class="form__label">
+          <span class="visually-hidden">Поиск</span>
+          <input class="form__input" type="search">
+        </label>
+      </form>
+      <div class="basket header__basket">
+        <a class="basket__icon" href="#">
+          <span class="visually-hidden">Корзина</span>
+        </a>
+        <p class="basket__text">
+          Корзина<span class="basket__value">пока пуста</span>
+        </p>
+      </div>
+    </header>
+    <main class="main main__inner">
+      <h1 class="main__title">Каталог товаров</h1>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <a class="catalog__link" href="#">
+            <img src="#" alt="Зайчик-попрыгайчик">
+            <p class="catalog__text">Зайчик-попрыгайчик</p>
+            <span class="catalog__span">Рост 30см, вес 200г</span>
+          </a>
+          <p class="catalog__price">1 200 руб.</p>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__link" href="#">
+            <img src="#" alt="Корзина для белья">
+            <p class="catalog__text">Корзина для белья</p>
+            <span class="catalog__span">Диаметр 15см, высота 10см</span>
+          </a>
+          <p class="catalog__price">690 руб.</p>
+        </li>
+        <li class="catalog__item">
+          <a class="catalog__link" href="#">
+            <img src="#" alt="Большая корзина для игрушек">
+            <p class="catalog__text">Большая корзина для игрушек</p>
+            <span class="catalog__span">Диаметр 30см, высота 30см</span>
+          </a>
+          <p class="catalog__price">1 500 руб.</p>
+        </li>
+      </ul>
+      <section class="video">
+        <h2 class="video__title">Процесс производства</h2>
+        <div class="video__player">
+          <img src="#" alt="процесс производства">
+          <a class="button__video" href="#">
+            <span class="visually-hidden">Начать просмотр</span>
+          </a>
+        </div>
+        <p class="video__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="button video__button">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo footer__logo" href="index.html">
+        <img class="logo__image" src="#" alt="Mishka logo">
+      </a>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#">
+            <span class="visually-hidden">Мишка в instagram</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Мишка в facebook</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="#">
+            <span class="visually-hidden">Мишка в twitter</span>
+          </a>
+        </li>
+      </ul>
+      <a class="develop" href="#">
+        Разработанно<img src="#" alt="logo HTML Academy">
+      </a>
+    </footer>
+  </body>
+</html>
