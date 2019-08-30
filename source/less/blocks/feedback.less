@@ -1,0 +1,203 @@
+.feedback {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 87px;
+  padding: 0 30px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: -68px;
+    left: 0;
+
+    width: 100%;
+    height: 4%;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.feedback__title {
+  .font-bold(25px, 30px);
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+}
+
+.feedback__text {
+  .font(15px, 30px);
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+
+  color: @gray--dark;
+}
+
+.feedback__user-date {
+  margin-bottom: 32px;
+}
+
+.feedback__user-name {
+  .font-bold(17px);
+  margin: 0;
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+.feedback__user-email {
+  .font();
+  margin: 0;
+  padding: 0;
+
+  color: @gray--dark;
+}
+
+.feedback__toggle-wraper {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.feedback__toggle {
+  width: 50%;
+  height: 52px;
+
+  background-color: #ffffff;
+  border: 1px solid @gray;
+
+  background-size: 50px 26px;
+  background-position: 37px 12px;
+  background-repeat: no-repeat;
+
+  transition-duration: 0.3s;
+
+  &--back {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+
+    outline: none;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}
+
+.feedback__button {
+  height: 52px;
+  line-height: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    min-height: 457px;
+    margin-bottom: 148px;
+    padding: 0 50px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-size: 45% 457px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    &::before {
+      bottom: -83px;
+
+      height: 5%;
+
+      transform: rotate(180deg);
+    }
+  }
+
+  .feedback__title {
+    .font-bold(43px, 50px);
+    margin-left: -5px;
+    margin-bottom: 48px;
+    padding-top: 77px;
+  }
+
+  .feedback__text {
+    .font(17px, 30px);
+    margin-bottom: 59px;
+  }
+
+  .feedback__user-name {
+    .font-bold(18px);
+  }
+
+  .feedback__wraper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feedback__toggle-wraper {
+    width: 175px;
+    margin-right: 18px;
+    margin-top: 2px;
+  }
+
+  .feedback__toggle {
+    border: none;
+  }
+
+  .feedback__button {
+    position: absolute;
+    top: 79px;
+    right: 50px;
+
+    width: 175px;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .feedback {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback {
+    width: 1150px;
+    margin: 0 auto;
+    margin-bottom: 232px;
+    padding-left: 225px;
+
+    background-position: 50px 0;
+    background-size: 350px 457px;
+
+    &::before {
+      bottom: -89px;
+      left: 50px;
+
+      width: 1050px;
+      height: 23px;
+    }
+  }
+
+  .feedback__title {
+    .font-bold(53px, 57px);
+    padding-top: 70px;
+  }
+
+  .feedback__user-name {
+    .font-bold(17px);
+  }
+
+  .feedback__text {
+    width: 770px;
+    margin-bottom: 40px;
+  }
+}

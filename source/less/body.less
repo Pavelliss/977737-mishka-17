@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-wraper {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: @desktop-width) {
+  .body-wraper {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 90px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

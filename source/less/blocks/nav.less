@@ -1,0 +1,154 @@
+.nav__list {
+  .list-reset();
+}
+
+.nav__item {
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
+
+.nav__link {
+  .font-bold();
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 27px;
+  padding-left: 75px;
+
+  color: #000000;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav__button {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+
+  width: 23px;
+  height: 22px;
+
+  border: none;
+  background-color: #ffffff;
+
+  cursor: pointer;
+}
+
+.nav__button {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 5px;
+
+    width: 28px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.nav--closed .nav__button {
+  &::before {
+
+    top: 0;
+    left: 0;
+
+    width: 23px;
+    height: 3px;
+
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+
+    transform: rotate(0deg);
+  }
+
+  &::after {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: @modile-max-width) {
+  .nav--closed .nav__list,
+  .nav--closed .form__wraper {
+    display: none;
+  }
+
+  .nav--nojs .nav__button {
+    display: none;
+  }
+
+  .nav--nojs .nav__list,
+  .nav--nojs .form__wraper {
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .nav {
+    order: 2;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 340px;
+    margin-right: auto;
+  }
+
+  .nav__item {
+    box-shadow: none;
+    width: 170px;
+  }
+
+  .nav__link {
+    .font-bold(15px);
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  .nav__button {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav {
+    order: -1;
+  }
+
+  .nav__list {
+    width: 450px;
+  }
+
+  .nav__item {
+    width: 184px;
+
+    &:first-child {
+      margin-right: 35px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .nav__link {
+    .font-bold;
+    margin-top: 32px;
+    margin-bottom: 34px;
+  }
+}

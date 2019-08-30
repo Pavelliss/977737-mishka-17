@@ -1,0 +1,71 @@
+.basket {
+  .font-bold();
+}
+
+.basket__link {
+  position: relative;
+
+  display: block;
+  padding: 28px 0;
+
+  color: #000000;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  transition-duration: 0.3s;
+
+  &:hover svg,
+  &:focus svg {
+    fill: @color-main;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+
+  &:hover .basket__text,
+  &:focus .basket__text {
+    opacity: 0.6;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    fill: @color-main;
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}
+
+.basket__link svg {
+  position: absolute;
+  top: 31px;
+  left: 30px;
+
+  opacity: 0.2;
+}
+
+.basket__text {
+  margin: 0;
+  padding: 0;
+  padding-left: 75px;
+}
+
+@media (min-width: @tablet-width) {
+  .basket {
+    order: 1;
+  }
+
+  .basket__link {
+    padding-top: 31px;
+    padding-bottom: 34px;
+
+    box-shadow: none;
+  }
+
+  .basket__text {
+    margin: 0;
+    padding: 0;
+    padding-left: 82px;
+  }
+
+  .basket__link svg {
+    top: 35px;
+  }
+}

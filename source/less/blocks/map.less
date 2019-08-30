@@ -1,0 +1,60 @@
+.map {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 457px;
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 145px;
+    right: 36%;
+
+    width: 67px;
+    height: 100px;
+
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+
+    z-index: 1;
+  }
+}
+
+.map img {
+  display: block;
+  width: 100%;
+  height: 457px;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    &::before {
+      top: 139px;
+      right: 44%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    &::before {
+      top: 146px;
+      right: 219px;
+    }
+  }
+}

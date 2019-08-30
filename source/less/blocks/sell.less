@@ -1,0 +1,30 @@
+.sell {
+  .list-reset();
+  display: none;
+}
+
+.sell__link {
+  .font-bold(15px;);
+  color: #000000;
+}
+
+@media (min-width: @desktop-width) {
+  .sell {
+    display: flex;
+  }
+
+  .sell__item {
+    width: 184px;
+    margin-top: 17px;
+    margin-right: 35px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

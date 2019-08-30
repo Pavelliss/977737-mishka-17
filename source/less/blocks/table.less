@@ -1,0 +1,29 @@
+
+.table {
+  width: 100%;
+  margin: 0 auto;
+
+  border-collapse: collapse;
+}
+
+.table__td {
+  .font(15px, 20px);
+  padding: 0;
+  padding-top: 7px;
+  padding-bottom: 12px;
+
+  color: @gray--dark;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+
+  &--th {
+    width: 38%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .table__td--th {
+    width: 33%;
+  }
+}

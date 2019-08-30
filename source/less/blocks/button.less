@@ -1,0 +1,25 @@
+.button {
+  .font-bold(17px, 20px);
+  display: block;
+
+  color: @gray--dark;
+  text-transform: uppercase;
+  font-family: inherit;
+  text-align: center;
+
+  border: 2px solid @gray--dark;
+
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: @gray--dark;
+
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
