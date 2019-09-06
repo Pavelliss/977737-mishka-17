@@ -21,13 +21,17 @@
     position: absolute;
     width: 113px;
     height: 46px;
+
+    z-index: 3;
   }
 }
 
 @media (min-width: @desktop-width) {
   .logo {
-    position: static;
+    left: 50%;
     width: 149px;
     height: 72px;
+
+    transform: translateX(-50%);
   }
 }

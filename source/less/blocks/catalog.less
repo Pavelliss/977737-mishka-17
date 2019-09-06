@@ -1,0 +1,148 @@
+.catalog__list {
+  .list-reset();
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+  border: 1px solid @gray;
+
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+  }
+}
+
+.catalog__link img {
+  display: block;
+}
+
+.catalog__text,
+.catalog__span,
+.catalog__price {
+  margin: 0 28px;
+}
+
+.catalog__text {
+  .font-bold();
+  margin-top: 28px;
+  margin-bottom: 4px;
+
+  color: #000000;
+}
+
+.catalog__span {
+  .font(13px, 30px);
+
+  color: @gray--dark;
+}
+
+.catalog__price {
+  .font-bold(15px);
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-bottom: 27px;
+  padding-top: 20px;
+
+  border-top: 1px solid @gray;
+}
+
+.catalog__price svg {
+  opacity: 0.2;
+
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    fill: @color-main;
+    opacity: 1;
+
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-duration: 0.3s;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    margin-top: 79px;
+    padding: 0 50px;
+  }
+
+  .catalog__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 334px;
+    margin-bottom: 54px;
+    padding-left: 50%;
+  }
+
+  .catalog__link img {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    height: 100%;
+    width: 50%;
+  }
+
+  .catalog__text {
+    .font-bold(20px);
+    width: 240px;
+    margin-top: 25px;
+  }
+
+  .catalog__span {
+    .font(15px, 30px);
+  }
+
+  .catalog__price {
+    .font-bold();
+    margin-top: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list-wraper {
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 125px;
+    margin-left: -51px;
+  }
+
+  .catalog__item {
+    width: 316px;
+    min-height: 660px;
+    margin-left: 51px;
+    padding-left: 0;
+  }
+
+  .catalog__link img {
+    position: static;
+    width: 100%;
+    height: 462px;
+  }
+}
