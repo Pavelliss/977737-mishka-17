@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Каталог товаров</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
@@ -38,14 +39,14 @@
           <button class="nav__button" type="button">
             <span class="visually-hidden">Меню сайте</span>
           </button>
-          <div class="form__wraper">
+          <div class="form-search-wraper">
             <form class="form-search header__form" method="post" action="https://echo.htmlacademy.ru">
               <label class="form-search__label">
                 <svg width="18" height="18">
                   <use xlink:href="#sp-icon-search"></use>
                 </svg>
                 <span class="visually-hidden">Поиск</span>
-                <input class="form-search__input form__placeholder-search" type="search" placeholder="Поиск по сайту">
+                <input class="form-search__input form-search__placeholder" type="search" placeholder="Поиск по сайту">
               </label>
             </form>
             <div class="basket header__basket">
@@ -73,7 +74,7 @@
       </header>
       <main class="main main__inner">
         <h1 class="main__title">Каталог товаров</h1>
-        <div class="catalog__list-wraper">
+        <div class="catalog">
           <ul class="catalog__list">
             <li class="catalog__item">
               <a class="catalog__link" href="#">
@@ -91,6 +92,7 @@
               <p class="catalog__price">
                 1 200 руб.
                 <a class="catalog__basket" href="#">
+                  <span class="visually-hidden">Корзина</span>
                   <svg width="20" height="19">
                     <use xlink:href="#sp-icon-cart"></use>
                   </svg>
@@ -113,6 +115,7 @@
               <p class="catalog__price">
                 690 руб.
                 <a class="catalog__basket" href="#">
+                  <span class="visually-hidden">Корзина</span>
                   <svg width="20" height="19">
                     <use xlink:href="#sp-icon-cart"></use>
                   </svg>
@@ -136,6 +139,7 @@
               <p class="catalog__price">
                 1 500 руб.
                 <a class="catalog__basket" href="#">
+                  <span class="visually-hidden">Корзина</span>
                   <svg width="20" height="19">
                     <use xlink:href="#sp-icon-cart"></use>
                   </svg>
@@ -156,14 +160,14 @@
                 <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
                 <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="процесс производства">
               </picture>
-              <a class="button__video" href="#">
+              <a class="video__button" href="#">
                 <span class="visually-hidden">Начать просмотр</span>
               </a>
             </div>
             <p class="video__text">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
             </p>
-            <a class="button video__button">Сделать заказ</a>
+            <a class="button button--video">Сделать заказ</a>
           </section>
         </div>
       </main>
@@ -226,7 +230,7 @@
               <button class="modal__button-size modal__button-size--l" type="button">l</button>
             </li>
           </ul>
-          <button class="button model__button" type="button">Добавить</button>
+          <button class="button modal__button" type="button">Добавить</button>
         </div>
       </div>
       <script src="js/app.min.js"></script>
