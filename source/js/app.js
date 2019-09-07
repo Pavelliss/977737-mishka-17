@@ -2,7 +2,7 @@ var navButton = document.querySelector('.nav__button');
 var nav = document.querySelector('.nav');
 var orderButton = document.querySelector('.offer__button');
 var modal = document.querySelector('.modal-wraper');
-var modalButton = document.querySelector('.model__button');
+var modalButton = document.querySelector('.modal__button');
 var catalogButton = document.querySelectorAll('.catalog__basket');
 
 
